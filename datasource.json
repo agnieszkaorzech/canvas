@@ -1,0 +1,15 @@
+{"menu": {
+  "header": "header",
+  "items": [
+    {"path":"Bet_Line.png", "title":"Bet_Line"},
+    {"path":"BG.png", "title":"BG"},
+    {"path":"BTN_Spin.png", "title":"BTN_Spin"},
+    {"path":"BTN_Spin_d.png", "title":"BTN_Spin_d"},
+    {"path":"SYM1.png", "title":"SYM1"},
+    {"path":"SYM3.png", "title":"SYM3"},
+    {"path":"SYM4.png", "title":"SYM4"},
+    {"path":"SYM5.png", "title":"SYM5"},
+    {"path":"SYM6.png", "title":"SYM6"},
+    {"path":"SYM7.png", "title":"SYM7"}
+  ]
+}}

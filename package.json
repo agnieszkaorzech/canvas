@@ -1,0 +1,33 @@
+{
+  "name": "emailapp",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo\"Error: no test specified\"&& exit1"
+  },
+  "keywords": [],
+  "author": "Agnieszka Orzech",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.1.18",
+    "body-parser": "^1.16.1",
+    "css-loader": "^0.26.2",
+    "express": "^4.14.1",
+    "extract-text-webpack-plugin": "^1.0.0-beta.4",
+    "file-loader": "^0.10.1",
+    "font-awesome": "^4.7.0",
+    "module": "^1.2.5",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0",
+    "sass-loader": "^6.0.2",
+    "sendgrid": "^4.7.1",
+    "style-loader": "^0.13.2",
+    "url-loader": "^0.5.8",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.3"
+  }
+}
