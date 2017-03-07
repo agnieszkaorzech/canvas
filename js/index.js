@@ -5,11 +5,8 @@ let myEl = document.getElementById('onPlay'),
     breakAction = false,
     firstChoice = true,
     chooseItem = null,
-    result = null,
-    imageIndex = 0,
-    animPctComplete = 0,
-    fps = 60,
-    rwdcanvas = null;
+    result = null;
+
 
 // Ajax function - load json file
 function fetchJSONFile(path, callback) {
@@ -107,7 +104,12 @@ function loadAllImages(callback) {
     }
 }
 let imagesOK = -1,
-    imgs = [];
+    imgs = [],
+    imageIndex = 0,
+    animPctComplete = 0,
+    fps = 60,
+    rwdcanvas = null;
+
 function animate() {
     setTimeout(function () {
         if (!breakAction) {
