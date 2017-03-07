@@ -2,8 +2,8 @@
 var path = require('path');
 
 module.exports = {
-    context: path.resolve('js'),
-    entry: ["./index.js"],
+    context: path.resolve(__dirname, 'js'),
+    entry: "./index",
     output: {
         path: path.resolve('build/js/'),
         publicPath: '/public/assets/js/',
