@@ -1,6 +1,4 @@
-/**
- * Created by Agnieszka on 03.03.2017.
- */
+
 var path = require('path');
 
 module.exports = {
