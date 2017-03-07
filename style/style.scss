@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: mediumturquoise;
+  background-color: #4D70BE;
+  font-family: 'Oswald';
 }
 
 main {
@@ -25,6 +26,7 @@ section {
 }
 
 aside {
+  padding-top: 100px;
   float: right;
   margin: auto 0;
   width: 50%;
@@ -39,8 +41,29 @@ aside figure {
 button {
   align-items: center;
   width: 60%;
+  background-color: #3FD295;
+  border-radius:6px;
 }
 
-canvas {
+h1{
+  font-size: 170%;
+  text-align: center;
+}
+h2{
+  font-size: 140%;
+  text-align: center;
+}
+footer{
+  text-align: center;
+}
+
+
+@media screen and (max-width: 786px) {
+  h2{
+    font-size: 100%;
+  }
+  h2{
+    font-size: 80%;
+  }
   border: 1px solid darkblue;
 }

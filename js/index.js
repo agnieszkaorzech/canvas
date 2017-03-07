@@ -1,7 +1,6 @@
 import "../style/style.scss";
 let myEl = document.getElementById('onPlay'),
     images = document.getElementsByTagName('img'),
-    json = [],
     imageURLs = [],
     breakAction = false,
     firstChoice = true,
@@ -10,8 +9,7 @@ let myEl = document.getElementById('onPlay'),
     imageIndex = 0,
     animPctComplete = 0,
     fps = 60,
-    imagesOK = -1,
-    imgs = [];
+    rwdcanvas = null;
 
 // Ajax function - load json file
 function fetchJSONFile(path, callback) {
@@ -41,8 +39,11 @@ let generateImage = function (src, id, styles, alt) {
 //load data from ajax
 fetchJSONFile('datasource.json', function (data) {
     for (let v of data.menu.items) {
-        json.push(v.title);
+        if (v.path.search('SYM') !== -1) {
+            imageURLs.push("../img/" + v.path);
+        }
     }
+    imageURLs;
 });
 generateImage('SYM1.png', 'SYM1', '30%', 'Game');
 generateImage('SYM3.png', 'SYM3', '30%', 'Game');
@@ -53,12 +54,11 @@ generateImage('SYM7.png', 'SYM7', '30%', 'Game');
 generateImage('Bet_Line.png', 'Bet_Line', '100%', 'Game');
 
 //Press image
-for (var i = 0, size = images.length; i < size; i++) {
+for (let i = 0, size = images.length; i < size; i++) {
     images[i].addEventListener('click', function (ev) {
         chooseItem = ev.target.title;
     })
-}
-;
+};
 //Random items
 myEl.addEventListener('click', function () {
     if (!chooseItem) {
@@ -88,14 +88,6 @@ window.requestAnimFrame = (function (callback) {
         };
 })();
 
-
-imageURLs.push("../img/SYM1.png");
-imageURLs.push("../img/SYM3.png");
-imageURLs.push("../img/SYM4.png");
-imageURLs.push("../img/SYM5.png");
-imageURLs.push("../img/SYM6.png");
-imageURLs.push("../img/SYM7.png");
-
 function loadAllImages(callback) {
     if (firstChoice) {
         for (var i = 0; i < imageURLs.length; i++) {
@@ -114,7 +106,8 @@ function loadAllImages(callback) {
         animate();
     }
 }
-
+let imagesOK = -1,
+    imgs = [];
 function animate() {
     setTimeout(function () {
         if (!breakAction) {
@@ -134,6 +127,7 @@ function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(img, imgX, imgY);
         result = img.src;
+        rwdcanvas= img;
 
         // increment the animationPctComplete for next frame
         animPctComplete += .1; //100/fps;
